@@ -1,0 +1,25 @@
+name: Fetch Lead Times
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Download lead times CSV
+        run: |
+          curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXhv1pbA_cLvWeM-b7ttk8wZR7kpEYbFvBGod4vYNEH1e2iF9soaQbPDYb2QpNkjRzKlKKgUaYkHvp/pub?output=csv" -o lead_times.csv
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add lead_times.csv
+          git diff --staged --quiet || git commit -m "Update lead times"
+          git push
