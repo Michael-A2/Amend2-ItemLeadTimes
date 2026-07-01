@@ -3,7 +3,7 @@ name: Fetch Lead Times
 on:
   schedule:
     - cron: '0 0 * * 0'  # Every Sunday at midnight UTC
-  workflow_dispatch:       # Also allows manual trigger
+  workflow_dispatch:
 
 jobs:
   fetch:
