@@ -1,6 +1,6 @@
 ,Amend2 & Techna Clip Rough Item Lead Times,,,
 ,Updated Biweekly,,,
-,Last updated on 06/12/2026,,,
+,Last updated on 07/06/2026,,,
 order,Item Number,Brief Item Description,Status,Rough ETA / Lead Time
 1,MOD2556-5RND,"Mod-2, Mod-3 & Mod-C AR-15 5.56/.223-Compatible Red Minus 5-Round Limiter 3-Pack",Discontinued,N/A
 2,458MOD2BLK10,Mod-2 AR-15 .458 SOCOM/.50 Beowulf Black 10rd Magazine,Discontinued,N/A
@@ -68,14 +68,14 @@ order,Item Number,Brief Item Description,Status,Rough ETA / Lead Time
 64,556MODACMBS30,Mod-A AR-15 5.56/.223 Coyote Brown Custom UV-Printed Maple Bar Sprinkle Donut 30rd Magazine,Pre-Order Only,4 - 8 weeks
 65,556MODACRBS30,Mod-A AR-15 5.56/.223 Coyote Brown Custom UV-Printed Rhodesian Brushstroke Camo 30rd Magazine,Pre-Order Only,4 - 8 weeks
 66,556MODAB1030,Mod-A AR-15 5.56/.223 Black 10/30 10rd Magazine - Restricted State Compliant,Made to Order,0 - 4 weeks
-67,556MODAB1520,Mod-A AR-15 5.56/.223 Black 15/20 15rd Magazine - Colorado Compliant,Pre-Order Only,2 - 6 weeks
-68,556MODABLK10,Mod-A AR-15 5.56/.223 Black 10rd Magazine,Pre-Order Only,4 - 8 weeks
-69,556MODABLK20,Mod-A AR-15 5.56/.223/.300 Blackout Black 20rd Magazine,Pre-Order Only,2 - 6 weeks
+67,556MODAB1520,Mod-A AR-15 5.56/.223 Black 15/20 15rd Magazine - Colorado Compliant,Pre-Order Only,2 - 4 weeks
+68,556MODABLK10,Mod-A AR-15 5.56/.223 Black 10rd Magazine,Pre-Order Only,2 - 4 weeks
+69,556MODABLK20,Mod-A AR-15 5.56/.223/.300 Blackout Black 20rd Magazine,Pre-Order Only,2 - 4 weeks
 70,556MODABLK30,Mod-A AR-15 5.56/.223 Black 30rd Magazine,In-Stock,0 - 2 weeks
 71,A2MAGDRUMMODA,Mod-A AR-15 5.56/.223 Magazine Display Drum Dump Bin with 200 units of 556MODABLK30,In-Stock,0 - 2 weeks
-72,556MODACYT10,Mod-A AR-15 5.56/.223 Coyote Brown 10rd Magazine,Pre-Order Only,4 - 8 weeks
-73,556MODACYT20,Mod-A AR-15 5.56/.223/.300 Blackout Coyote Brown 20rd Magazine,Pre-Order Only,2 - 6 weeks
-74,556MODACYT30,Mod-A AR-15 5.56/.223 Coyote Brown 30rd Magazine,Backordered,2 - 6 weeks
+72,556MODACYT10,Mod-A AR-15 5.56/.223 Coyote Brown 10rd Magazine,Pre-Order Only,2 - 6 weeks
+73,556MODACYT20,Mod-A AR-15 5.56/.223/.300 Blackout Coyote Brown 20rd Magazine,Pre-Order Only,2 - 4 weeks
+74,556MODACYT30,Mod-A AR-15 5.56/.223 Coyote Brown 30rd Magazine,In-Stock,0 - 2 weeks
 75,6AMODABLK15,Mod-A AR-15 6mm ARC/22 ARC/338 ARC/6.5 Grendel Black 20rd Magazine,Pre-Order Only,20+ weeks
 76,6AMODACYT15,Mod-A AR-15 6mm ARC/22 ARC/338 ARC/6.5 Grendel Coyote Brown 20rd Magazine,Pre-Order Only,20+ weeks
 77,458MODCSMK10,Mod-C AR-15 .458 SOCOM/.50 Beowulf Translucent Smoke 10rd Magazine,Discontinued,N/A
@@ -137,7 +137,7 @@ order,Item Number,Brief Item Description,Status,Rough ETA / Lead Time
 133,762MODABLK20,Mod-A SR-25/AR-10 .308/6.5CM Black 20rd Magazine,Pre-Order Only,4 - 8 weeks
 134,762MODACYT10,Mod-A SR-25/AR-10 .308/6.5CM Coyote Brown 10rd Magazine,Pre-Order Only,4 - 8 weeks
 135,762MODACYT20,Mod-A SR-25/AR-10 .308/6.5CM Coyote Brown 20rd Magazine,Pre-Order Only,4 - 8 weeks
-136,ARCA3BLK,"M-LOK® to ARCA® Adapter - 3"" Black",Backordered,2 - 4 weeks
+136,ARCA3BLK,"M-LOK® to ARCA® Adapter - 3"" Black",In-Stock,0 - 2 weeks
 137,ARCA6BLK,"M-LOK® to ARCA® Adapter - 6"" Black",In-Stock,0 - 2 weeks
 138,ARCA12BLK,"M-LOK® to ARCA® Adapter - 12"" Black",Pre-Order Only,8 - 12 weeks
 139,ARCA3FDE,"M-LOK® to ARCA® Adapter - 3"" Flat Dark Earth",In-Stock,0 - 2 weeks
