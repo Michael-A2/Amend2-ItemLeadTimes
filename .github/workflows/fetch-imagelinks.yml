@@ -26,4 +26,5 @@ jobs:
           git config user.email "actions@github.com"
           git add amend2-image-links-png.csv amend2-image-links-jpeg.csv
           git diff --staged --quiet || git commit -m "Update PNG and JPEG image links"
+          git pull --rebase
           git push
