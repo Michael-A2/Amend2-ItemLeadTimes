@@ -24,7 +24,9 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git pull --rebase
           git add amend2_image_links_png.csv amend2_image_links_jpeg.csv
+          git stash
+          git pull --rebase
+          git stash pop
           git diff --staged --quiet || git commit -m "Update PNG and JPEG image links"
-          git push --force
+          git push
