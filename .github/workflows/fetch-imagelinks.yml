@@ -12,14 +12,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Download image links CSV
+      - name: Download PNG image links
         run: |
-          curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vR7OIutQwIUga6KhlDCx1psTnrRkKEDfeFOap_rxES0YEo2RQqbzYOLKQEah8IjEHNjvi7oyMl1qtwQ/pub?output=csv" -o image_links.csv
+          curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vR7OIutQwIUga6KhlDCx1psTnrRkKEDfeFOap_rxES0YEo2RQqbzYOLKQEah8IjEHNjvi7oyMl1qtwQ/pub?output=csv" -o amend2-image-links-png.csv
+
+      - name: Download JPEG image links
+        run: |
+          curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vS9oIgmf14CBiEZfCD4KjmWxzXjZJzvwvQvb1Jd2Ot4uwkV_-gt-Iv-IJ_ZGzxucGAkpcI0RtG7FsT1/pub?output=csv" -o amend2-image-links-jpeg.csv
 
       - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add image_links.csv
-          git diff --staged --quiet || git commit -m "Update image links"
+          git add amend2-image-links-png.csv amend2-image-links-jpeg.csv
+          git diff --staged --quiet || git commit -m "Update PNG and JPEG image links"
           git push
