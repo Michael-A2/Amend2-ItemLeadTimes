@@ -1,0 +1,33 @@
+name: Fetch Amend2 Product List
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # daily at midnight UTC, same cadence as fetch-imagelinks.yml / fetch-leadtimes.yml
+  workflow_dispatch: {}    # lets you manually trigger a run from the Actions tab
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Download Master Item List
+        run: curl -L -f -o amend2_master_item_list.csv "https://docs.google.com/spreadsheets/d/e/2PACX-1vRIOsvSDA64ccW6gaZccVArrheyvlpDyJEHvJRcSnsvleM1jFaYHD450CrptqsK2A/pub?gid=277252168&single=true&output=csv"
+
+      - name: Download Best Sellers
+        run: curl -L -f -o amend2_best_sellers.csv "https://docs.google.com/spreadsheets/d/e/2PACX-1vRIOsvSDA64ccW6gaZccVArrheyvlpDyJEHvJRcSnsvleM1jFaYHD450CrptqsK2A/pub?gid=1043783035&single=true&output=csv"
+
+      - name: Download Item Web Listings & Sell Sheets
+        run: curl -L -f -o amend2_item_web_listings_sell_sheets.csv "https://docs.google.com/spreadsheets/d/e/2PACX-1vRIOsvSDA64ccW6gaZccVArrheyvlpDyJEHvJRcSnsvleM1jFaYHD450CrptqsK2A/pub?gid=735225295&single=true&output=csv"
+
+      - name: Download Prop 65 Information
+        run: curl -L -f -o amend2_prop65_information.csv "https://docs.google.com/spreadsheets/d/e/2PACX-1vRIOsvSDA64ccW6gaZccVArrheyvlpDyJEHvJRcSnsvleM1jFaYHD450CrptqsK2A/pub?gid=662886891&single=true&output=csv"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add amend2_master_item_list.csv amend2_best_sellers.csv amend2_item_web_listings_sell_sheets.csv amend2_prop65_information.csv
+          git diff --staged --quiet || git commit -m "Update Amend2 product list data ($(date -u +%Y-%m-%d))"
+          git push
