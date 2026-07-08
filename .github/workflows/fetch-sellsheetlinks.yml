@@ -12,14 +12,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
  
-      - name: Download published sheet as CSV
+      - name: Download published sheets as CSV
         run: |
           curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vQEcWBf_SEzruYB75quB7aQ1mVZwuiZ_cLGxVkv-imCNdxSZr552ara-zOp5igy_sCrz-z7oU3OMeQ-/pub?gid=144607637&single=true&output=csv" -o amend2_item_sell_sheet_links.csv
+          curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vQEcWBf_SEzruYB75quB7aQ1mVZwuiZ_cLGxVkv-imCNdxSZr552ara-zOp5igy_sCrz-z7oU3OMeQ-/pub?gid=1645564385&single=true&output=csv" -o amend2_item_sell_sheet_skipped_files.csv
  
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add amend2_item_sell_sheet_links.csv
+          git add amend2_item_sell_sheet_links.csv amend2_item_sell_sheet_skipped_files.csv
           git diff --quiet && git diff --staged --quiet || git commit -m "Update sell sheet links"
           git push
