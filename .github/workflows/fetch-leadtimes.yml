@@ -14,7 +14,7 @@ jobs:
 
       - name: Download lead times CSV
         run: |
-          curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXhv1pbA_cLvWeM-b7ttk8wZR7kpEYbFvBGod4vYNEH1e2iF9soaQbPDYb2QpNkjRzKlKKgUaYkHvp/pub?output=csv" -o lead_times.csv
+          curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXhv1pbA_cLvWeM-b7ttk8wZR7kpEYbFvBGod4vYNEH1e2iF9soaQbPDYb2QpNkjRzKlKKgUaYkHvp/pub?gid=0&single=true&output=csv" -o lead_times.csv
 
       - name: Commit and push
         run: |
