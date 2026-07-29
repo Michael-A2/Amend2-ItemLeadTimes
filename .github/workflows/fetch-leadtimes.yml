@@ -1,7 +1,7 @@
 name: Fetch Lead Times
 on:
   schedule:
-    - cron: '0 7 * * *'   # midnight Mountain Standard Time (UTC-7)
+    - cron: '0 7 * * *'   # daily at midnight Mountain
   workflow_dispatch:
 jobs:
   fetch:
@@ -22,3 +22,6 @@ jobs:
           git add lead_times.csv
           git diff --staged --quiet || git commit -m "Update lead times"
           git push
+      - name: Purge jsDelivr CDN cache
+        run: |
+          curl -s "https://purge.jsdelivr.net/gh/Michael-A2/Amend2-ItemLeadTimes@main/lead_times.csv"
