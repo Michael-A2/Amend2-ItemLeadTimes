@@ -1,24 +1,20 @@
 name: Fetch Lead Times
-
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 7 * * *'   # midnight Mountain Standard Time (UTC-7)
   workflow_dispatch:
-
 jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
-      - name: Download lead times CSV
+      - name: Download lead times CSV from Google
         run: |
           curl -L \
             -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" \
             "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXhv1pbA_cLvWeM-b7ttk8wZR7kpEYbFvBGod4vYNEH1e2iF9soaQbPDYb2QpNkjRzKlKKgUaYkHvp/pub?gid=0&single=true&output=csv&_=$(date +%s)" \
             -o lead_times.csv
-
       - name: Commit and push
         run: |
           git config user.name "github-actions"
